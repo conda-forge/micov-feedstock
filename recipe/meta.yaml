@@ -1,5 +1,5 @@
 {% set name = "micov" %}
-{% set version = "2025.2" %}
+{% set version = "2025.3" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/micov-{{ version }}.tar.gz
-  sha256: ea80ddb260f073bed201331aab91b28e289202f5b3b960cbb63373d19660c749
+  sha256: 61cb8e1f7f216f36057ef4c0c828cf5d47200dd51b26e5385fc37050036de0e5
 
 build:
   entry_points:
