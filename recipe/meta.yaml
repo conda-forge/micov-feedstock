@@ -1,5 +1,5 @@
 {% set name = "micov" %}
-{% set version = "2025.2" %}
+{% set version = "2025.9" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/micov-{{ version }}.tar.gz
-  sha256: ea80ddb260f073bed201331aab91b28e289202f5b3b960cbb63373d19660c749
+  sha256: 7dcf4b00806792db5fea1b7e0f29c4956e13a778f1b989d6f819355252a690a8
 
 build:
   entry_points:
@@ -25,13 +25,13 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - click
+    - click <8.2
     - scipy
     - pyarrow <16.0.0
     - polars-u64-idx <1.23.0
     - numba
     - matplotlib-base >=3.9.0
-    - python-duckdb >=1.2.0
+    - python-duckdb >=1.2.0,<1.3
     - pytest
 
 test:
